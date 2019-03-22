@@ -2,6 +2,8 @@
 #define __INCLUDED_DISPLAY__
 
 #include <Arduino.h>
+#include <U8g2lib.h>
+#include <SPI.h>
 #include "fan.h"
 #include "sensor.h"
 
@@ -21,7 +23,6 @@ private:
 	size_t fansLength;
 
 	uint8_t cnt;
-
 
 	struct {
 		Mode mode;
