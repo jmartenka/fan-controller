@@ -9,26 +9,26 @@
 
 
 class Display {
-public:
-	Display(){};
-	Display(Sensor* sensors, size_t sensorsLength, Fan* fans, size_t fansLength);
+  public:
+    Display() {};
+    Display(Sensor* sensors, size_t sensorsLength, Fan* fans, size_t fansLength);
 
-	void update(Mode mode);
+    void update(Mode mode);
 
-private:
+  private:
 
-	Sensor* sensors;
-	size_t sensorsLength;
-	Fan* fans;
-	size_t fansLength;
+    Sensor* sensors;
+    size_t sensorsLength;
+    Fan* fans;
+    size_t fansLength;
 
-	uint8_t cnt;
+    uint8_t cnt;
 
-	struct {
-		Mode mode;
-		uint16_t* rpm;
-	} lastState;
-	bool init = true;
+    struct {
+      Mode mode;
+      uint16_t* rpm;
+    } lastState;
+    bool init = true;
 };
 
 

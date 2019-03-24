@@ -5,25 +5,22 @@
 
 
 class Buzzer {
-public:
-	Buzzer(){};
-	Buzzer(uint8_t pin);
+  public:
+    Buzzer() {};
+    Buzzer(uint8_t pin);
 
-	void setup();
+    void setup();
 
-	bool isActive() const{
-		return pin != -1;
-	}
+    bool isActive() const {
+      return pin != -1;
+    }
 
+    void beep(const char* signal) const;
+    void beepNumber(int number) const;
+    void set(bool on) const;
 
-	void beep(const char* signal) const;
-
-	void beepNumber(int number) const;
-
-	void set(bool on) const;
-
-private:
-	uint8_t pin;
+  private:
+    uint8_t pin;
 };
 
 
